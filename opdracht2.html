@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+ <script>
+let voornaam = prompt ("Wat is jouw voornaam?");
+let achternaam = prompt ("Wat is jouw achternaam?");
+
+function controle (opvang) {
+    if (voornaam, achternaam == null) {
+       document.write ("<p>u heeft geannuleerd.</p>")
+       return 'false';
+    }
+
+    else if (voornaam.length, achternaam.length == 0) {
+    document.write ("<p>u heeft niks ingevuld.</p>")
+       return 'false';
+    }
+    else if (voornaam.length, achternaam.length <= 2 ) {
+        document.write ("<p>u heeft minder dan 2 tekens ingevuld.</p>")
+        return 'false';
+    }
+    
+    else {
+    voornaam = voornaam.charAt(0).toUpperCase() + voornaam.slice(1);
+    achternaam = achternaam.charAt(0).toUpperCase() + achternaam.slice(1);
+    let uitkomst = voornaam + " " + achternaam;
+    return uitkomst;
+}
+
+ }
+let naam = controle (voornaam, achternaam);
+document.write (`<p> Hallo ${naam }! </p>`)
+</script>
+</body>
+</html>
